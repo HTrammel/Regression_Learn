@@ -98,8 +98,8 @@ text(newx, rep(250, 3), labels = newx, pos = 2)
 ```{r doing_equations_hard_way}
 y <- diamond$price; x <- diamond$carat; n <- length(y)
 # slope calculations
-beta1 <- cor(y, x) * sd(y) / sd(x)
-beta0 <- mean(y) - beta1 * mean(x)
+beta1 <- cor(y, x) * sd(y) / sd(x)  # slope
+beta0 <- mean(y) - beta1 * mean(x)  # intercept
 # residuals
 e <- y - beta0 - beta1 * x
 # estimate of sigma
